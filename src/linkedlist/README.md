@@ -4,7 +4,8 @@ Given a sorted linked list of integers, remove all the duplicate elements in the
 
 Here's an example and some starter code:
 
-```
+``` python
+
 class Node:
   def __init__(self, value, next=None):
     self.value = value

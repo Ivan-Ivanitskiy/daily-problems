@@ -4,7 +4,8 @@ N-Queens is the problem where you find a way to put n queens on a nxn chess boar
 
 Here's an example and some starter code:
 
-```
+``` python
+
 def n_queens(n):
   # Fill this in.
 

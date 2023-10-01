@@ -18,6 +18,8 @@ hex_map = {
 }
 
 def to_hex(n):
+    if n == 0:
+        return '0'
     hex_number = ''
     while n > 0:
         hex_number = hex_map[n % 16] + hex_number

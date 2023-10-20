@@ -7,21 +7,20 @@ def fourSum(nums, target):
 def nSum(nums_sorted, addends, n, target):
     addends_combinations = []
     for i, num in enumerate(nums_sorted):
-        addends_ = addends[0:]
-        addends_.append(num)
-        current_sum = sum(addends_)
+        current_addends = addends[0:]
+        current_addends.append(num)
+        current_sum = sum(current_addends)
         if current_sum > target:
-            continue
+            break
         if (current_sum == target) and (n > 1):
+            break
+        elif (n == 1) and (current_sum < target):
             continue
-        elif (n == 1) and (current_sum != target):
-            continue
-        nums_sorted_ = nums_sorted[i+1:]
+        current_nums_sorted = nums_sorted[i+1:]
         if (current_sum == target) and (n == 1):
-            addends_combinations.append(addends_)
-            continue
-        addends_combinations_ = nSum(nums_sorted_, addends_, n-1, target)
-        addends_combinations += addends_combinations_
+            addends_combinations.append(current_addends)
+            break
+        addends_combinations += nSum(current_nums_sorted, current_addends, n-1, target)
     return remove_duplicates(addends_combinations)
 
 def remove_duplicates(data):

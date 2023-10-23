@@ -33,7 +33,7 @@ n4 = Node(4, None, n5)
 root = Node(3, n1, n4)
 
 print(root)
-# (3, (1, (2)), (4, None, (5)))
+# (3, (1, None, (2)), (4, None, (5)))
 # How the tree looks like
 #     3
 #   /   \

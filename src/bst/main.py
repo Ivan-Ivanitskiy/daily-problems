@@ -28,9 +28,6 @@ class Node:
                 return self, right
             else:
                 return self, None
-
-# def split_bst(bst, s):
-    # Fill this in.
   
 n2 = Node(2)
 n1 = Node(1, None, n2)
@@ -41,7 +38,7 @@ n4 = Node(4, None, n5)
 root = Node(3, n1, n4)
 
 print(root)
-# (3, (1, (2)), (4, None, (5)))
+# (3, (1, None, (2)), (4, None, (5)))
 
 print(root.split(2))
 # ((1, None, (2)), (3, None, (4, None, (5))))
